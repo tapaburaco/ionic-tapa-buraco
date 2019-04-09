@@ -3,23 +3,11 @@ import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { Camera, CameraOptions } from '@ionic-native/camera';
-
 @Component({
   selector: 'app-denuncia',
   templateUrl: './denuncia.component.html'
 })
 export class DenunciaComponent {
-  
-   options: CameraOptions = {
-    quality: 100,
-    destinationType: this.camera.DestinationType.DATA_URL,
-    encodingType: this.camera.EncodingType.JPEG,
-    mediaType: this.camera.MediaType.PICTURE,
-    cameraDirection:0
-  }
-
-  clickedImagePath:any;
 
   public denuncia = new FormGroup({
     usuario: new FormControl(''),
@@ -30,24 +18,10 @@ export class DenunciaComponent {
   });
 
   constructor(public db: AngularFirestore,
-    public navCtrl: NavController,
-    private camera: Camera) { }
-
-   clickImage(){
-    this.camera.getPicture(this.options).then((imageData) => {
-      // imageData is either a base64 encoded string or a file URI
-      // If it's base64 (DATA_URL):
-      let base64Image = 'data:image/jpeg;base64,' + imageData;
-      this.clickedImagePath = 'data:image/jpeg;base64,' + imageData;
-     }, (err) => {
-      // Handle error
-     });
-  }
-
+              public navCtrl: NavController
+  ){}
 
   enviar() {
-
-
     let usuario = this.denuncia.value.usuario;
     let email = this.denuncia.value.email;
     let telefone = this.denuncia.value.telefone;
