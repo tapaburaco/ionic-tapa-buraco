@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 
-import { HomePage } from '../pages/home/home';
+import { HomePage } from '../pages/home/home.component';
 
-import { TabsPage } from '../pages/tabs/tabs';
 
 @Component({
   templateUrl: 'app.html'
