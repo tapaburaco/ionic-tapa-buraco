@@ -12,7 +12,7 @@ declare const google;
 @IonicPage()
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.component.html'
 })
 export class HomeComponent {
   
