@@ -5,10 +5,11 @@
 </ion-header>
 
 <ion-content padding>
+  
   <h3>Identificou um buraco?</h3>
 
-  <div id="map_canvas">
-    <button ion-button (click)="onButtonClick($event)">Denunciar buraco</button>
-  </div>
-  
+  <button ion-button (click)="onButtonClick($event)">Denunciar buraco</button>
+
+  <app-maps></app-maps>
+
 </ion-content>

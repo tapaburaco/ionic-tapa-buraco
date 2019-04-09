@@ -8,7 +8,8 @@ import  { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 
-//
+//-------------COMPONENTS----------------//
+import { MapsComponent } from './maps/maps.component';
 //-------------PAGES---------------------//
 import { HomeComponent } from '../pages/home/home.component';
 import { DenunciaComponent } from '../pages/denuncia/denuncia.component';
@@ -27,7 +28,8 @@ const config = {
   declarations: [
     MyApp,
     HomeComponent,
-    DenunciaComponent
+    DenunciaComponent,
+    MapsComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ const config = {
   entryComponents: [
     MyApp,
     HomeComponent,
-    DenunciaComponent
+    DenunciaComponent,
+    MapsComponent
   ],
   providers: [
     GoogleMaps,
