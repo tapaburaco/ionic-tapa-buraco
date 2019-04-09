@@ -9,10 +9,10 @@ import { AngularFirestore } from '@angular/fire/firestore';
 })
 export class DenunciaComponent{
 
-  public form = new FormGroup({
+  public denuncia = new FormGroup({
     usuario: new FormControl(''),
     email: new FormControl(''),
-    telfone: new FormControl(''),
+    telefone: new FormControl(''),
     cpf: new FormControl(''),
     imagens: new FormControl('')
   });
@@ -21,11 +21,11 @@ export class DenunciaComponent{
 
   enviar(){
     
-    let usuario = this.form.value.usuario;
-    let email = this.form.value.email;
-    let telefone = this.form.value.telefone;
-    let cpf = this.form.value.cpf;
-    let imagens = this.form.value.imagens
+    let usuario = this.denuncia.value.usuario;
+    let email = this.denuncia.value.email;
+    let telefone = this.denuncia.value.telefone;
+    let cpf = this.denuncia.value.cpf;
+    let imagens = this.denuncia.value.imagens
 
     let denuncia = {
       usuario: usuario,
