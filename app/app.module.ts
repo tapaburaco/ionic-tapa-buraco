@@ -6,6 +6,7 @@ import { MyApp } from './app.component';
 import  { AngularFireModule } from '@angular/fire';
 import  { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
+import { Camera } from '@ionic-native/camera';
 
 //-------------PAGES---------------------//
 import { HomeComponent } from '../pages/home/home.component';
@@ -42,6 +43,7 @@ const config = {
   ],
   providers: [
     GoogleMaps,
+    Camera, 
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
