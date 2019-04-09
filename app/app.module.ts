@@ -8,6 +8,7 @@ import  { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 
+//
 //-------------PAGES---------------------//
 import { HomeComponent } from '../pages/home/home.component';
 import { DenunciaComponent } from '../pages/denuncia/denuncia.component';
