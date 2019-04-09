@@ -9,7 +9,7 @@ import { DenunciaComponent } from '../denuncia/denuncia.component';
 
 declare const google;
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'app-home',
   templateUrl: 'home.component.html'
@@ -25,14 +25,15 @@ export class HomeComponent {
     public navCtrl: NavController,
     public navParams: NavParams
   ) { }
-
-/*  map: GoogleMap;
+/*  
+  map: GoogleMap;
 
   constructor(public navCtrl: NavController) {}
-*/
-  /*ionViewDidLoad(){
+
+  ionViewDidLoad(){
     this.loadMap();
-  }*/
+  }
+*/  
   ionViewDidLoad() {
     // start my map
     let posMaceio = { lat: -9.648139, lng: -35.717239 }
@@ -43,17 +44,17 @@ export class HomeComponent {
     });
     this.map.setCenter(posMaceio);
   }
-
-  loadMap(){
 /*
+  loadMap(){
+
     Environment.setEnv({
       'API_KEY_FOR_BROWSER_RELEASE': 'AIzaSyBA8W-66aghPeIqcwdzAluNIfadrB82EHc',
       'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyBA8W-66aghPeIqcwdzAluNIfadrB82EHc'
     });
-*/
+
     this.map = GoogleMaps.create('map_canvas');
   }
-
+*/
   onButtonClick(){
     
     this.navCtrl.push(DenunciaComponent);
