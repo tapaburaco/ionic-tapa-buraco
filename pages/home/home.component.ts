@@ -5,10 +5,10 @@ import { GoogleMaps, GoogleMap, Environment } from '@ionic-native/google-maps';
 import { DenunciaComponent } from '../denuncia/denuncia.component';
 
 @Component({
-  selector: 'page-home',
+  selector: 'app-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomeComponent {
 
   map: GoogleMap;
 

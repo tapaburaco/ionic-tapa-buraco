@@ -8,7 +8,7 @@ import  { AngularFirestoreModule } from '@angular/fire/firestore';
 import { FormsModule } from '@angular/forms';
 
 //-------------PAGES---------------------//
-import { HomePage } from '../pages/home/home.component';
+import { HomeComponent } from '../pages/home/home.component';
 import { DenunciaComponent } from '../pages/denuncia/denuncia.component';
 
 // Configurações do Firebase:
@@ -24,7 +24,7 @@ const config = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
+    HomeComponent,
     DenunciaComponent
   ],
   imports: [
@@ -37,7 +37,7 @@ const config = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
+    HomeComponent,
     DenunciaComponent
   ],
   providers: [
