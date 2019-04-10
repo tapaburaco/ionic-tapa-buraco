@@ -1,7 +1,6 @@
-export class Imagem{
+export interface Imagem{
 
-  constructor(
-    nome?: string,
-    listaImg?: Array<Imagem>
-  ){}
+  nome: string,
+  listaImg: Array<Imagem>;
+  
 }

@@ -1,10 +1,8 @@
-export class Usuario {
+export interface Usuario {
 
-  constructor (
-    nome?: string,
-    email?: string,
-    senha?: string,
-    cpf?: number
-  ){}
+  nome: string,
+  email: string,
+  senha: string,
+  cpf: number;
 
 }
