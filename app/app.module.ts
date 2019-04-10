@@ -29,7 +29,7 @@ const config = {
   declarations: [
     MyApp,
     HomeComponent,
-    DenunciaComponent,
+    DenunciaComponent
    // MapsComponent,
    // CameraComponent
   ],
@@ -44,7 +44,7 @@ const config = {
   entryComponents: [
     MyApp,
     HomeComponent,
-    DenunciaComponent,
+    DenunciaComponent
    // MapsComponent,
    // CameraComponent
   ],
