@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { Denuncia } from '../../model/denuncia';
+import { Denuncia } from '../../model/Denuncia';
 
 @Component({
   selector: 'app-denuncia',
@@ -11,9 +11,9 @@ import { Denuncia } from '../../model/denuncia';
 })
 export class DenunciaComponent {
 
-  denun: Denuncia;
+  denuncia: Denuncia;
 
-  public denuncia = new FormGroup({
+  public form = new FormGroup({
     usuario: new FormControl(''),
     email: new FormControl(''),
     telefone: new FormControl(''),
@@ -26,22 +26,15 @@ export class DenunciaComponent {
   ){}
 
   enviar() {
-    let usuario = this.denuncia.value.usuario;
-    let email = this.denuncia.value.email;
-    let telefone = this.denuncia.value.telefone;
-    let cpf = this.denuncia.value.cpf;
-    let imagens = this.denuncia.value.imagens
 
-    let denuncia = {
-      usuario: usuario,
-      email: email,
-      telefone: telefone,
-      cpf: cpf,
-      imagens: imagens,
-      data: new Date().toDateString
-    };
+    this.denuncia.usuario = this.form.value.usuario;
+    this.denuncia.email = this.form.value.email;
+    this.denuncia.telefone = this.form.value.telefone;
+    this.denuncia.cpf = this.form.value.cpf;
+    //this.denuncia.imagens = this.form.value.imagens
+    this.denuncia.data = new Date().toDateString;
 
-    this.db.collection('denuncia').add(denuncia);
+    this.db.collection('denuncia').add(this.denuncia);
 
     this.navCtrl.pop();
   }
