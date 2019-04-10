@@ -3,13 +3,15 @@ import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import {Denuncia } from './denuncia/denuncia.component';
+import { Denuncia } from '../../model/denuncia';
 
 @Component({
   selector: 'app-denuncia',
   templateUrl: './denuncia.component.html'
 })
 export class DenunciaComponent {
+
+  denun: Denuncia;
 
   public denuncia = new FormGroup({
     usuario: new FormControl(''),
