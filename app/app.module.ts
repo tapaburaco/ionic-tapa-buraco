@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 
 //-------------COMPONENTS----------------//
-//import { MapsComponent } from './maps/maps.component';
+import { MapsComponent } from './maps/maps.component';
 //import { CameraComponent } from './camera/camera.component';
 //-------------PAGES---------------------//
 import { HomeComponent } from '../pages/home/home.component';
@@ -29,8 +29,8 @@ const config = {
   declarations: [
     MyApp,
     HomeComponent,
-    DenunciaComponent
-   // MapsComponent,
+    DenunciaComponent,
+    MapsComponent
    // CameraComponent
   ],
   imports: [
@@ -44,8 +44,8 @@ const config = {
   entryComponents: [
     MyApp,
     HomeComponent,
-    DenunciaComponent
-   // MapsComponent,
+    DenunciaComponent,
+    MapsComponent
    // CameraComponent
   ],
   providers: [
