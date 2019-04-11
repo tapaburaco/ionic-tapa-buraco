@@ -5,7 +5,7 @@ declare const google;
 
 @Component({
   selector: 'app-maps',
-  templateUrl: './maps/maps.component'
+  templateUrl: './maps.component.html'
 })
 export class MapsComponent{
   

@@ -3,7 +3,7 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 
 @Component({
   selector: 'app-camera',
-  templateUrl: './camera/camera.component'
+  templateUrl: './camera.component.html'
 })
 export class CameraComponent {
 
