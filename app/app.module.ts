@@ -5,6 +5,7 @@ import { GoogleMaps } from '@ionic-native/google-maps';
 import { MyApp } from './app.component';
 import  { AngularFireModule } from '@angular/fire';
 import  { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 
@@ -40,6 +41,7 @@ const config = {
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     FormsModule
   ],
   bootstrap: [IonicApp],
