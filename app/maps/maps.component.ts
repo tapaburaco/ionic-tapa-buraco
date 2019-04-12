@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { GoogleMaps, GoogleMap, Environment } from '@ionic-native/google-maps';
+import { GoogleMaps, GoogleMap, GoogleMapOptions, Environment } from '@ionic-native/google-maps';
 
 declare const google;
 
@@ -11,11 +11,14 @@ export class MapsComponent{
   
   map: GoogleMap;
 
-  constructor() {}
+  constructor() {
+    this.ionViewDidLoad();
+  }
 
   ionViewDidLoad(){
     this.loadMap();
   }
+
 
   loadMap(){
 
@@ -24,6 +27,17 @@ export class MapsComponent{
       'API_KEY_FOR_BROWSER_DEBUG': 'AIzaSyBA8W-66aghPeIqcwdzAluNIfadrB82EHc'
     });
 
-    this.map = GoogleMaps.create('map_canvas');
+    let mapOptions: GoogleMapOptions = {
+      camera: {
+         target: {
+           lat: 43.0741904,
+           lng: -89.3809802
+         },
+         zoom: 18,
+         tilt: 30
+       }
+    };
+
+    this.map = GoogleMaps.create('map_canvas', mapOptions);
   }
 }
