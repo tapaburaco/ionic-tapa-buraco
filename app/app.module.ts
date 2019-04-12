@@ -10,7 +10,7 @@ import { Camera } from '@ionic-native/camera';
 
 //-------------COMPONENTS----------------//
 import { MapsComponent } from './maps/maps.component';
-//import { CameraComponent } from './camera/camera.component';
+import { CameraComponent } from './camera/camera.component';
 //-------------PAGES---------------------//
 import { HomeComponent } from '../pages/home/home.component';
 import { DenunciaComponent } from '../pages/denuncia/denuncia.component';
