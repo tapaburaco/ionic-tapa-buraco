@@ -2,9 +2,6 @@
   "name": "ionic-td1xjp",
   "version": "0.0.0",
   "private": true,
-  "script": {
-    "start": "cordova run browser -l"
-  },
   "dependencies": {
     "@angular/common": "5.2.9",
     "@angular/compiler": "5.2.9",
