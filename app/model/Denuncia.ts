@@ -1,7 +1,7 @@
 import { Usuario } from '././Usuario';
 import { Imagem } from '././Imagem';
 
-export class Denuncia {
+export interface Denuncia {
 
   usuario: Usuario;
   email: string;
@@ -9,5 +9,4 @@ export class Denuncia {
   imagens: Array<Imagem>;
   data: Date;
   
-  constructor(){}
 }

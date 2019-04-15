@@ -9,6 +9,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { FormsModule } from '@angular/forms';
 import { Camera } from '@ionic-native/camera';
 
+import { AuthService } from './core/auth.service';
+
 //-------------COMPONENTS----------------//
 import { MapsComponent } from './maps/maps.component';
 import { CameraComponent } from './camera/camera.component';
@@ -56,6 +58,7 @@ const config = {
   providers: [
     GoogleMaps,
     Camera, 
+    AuthService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
