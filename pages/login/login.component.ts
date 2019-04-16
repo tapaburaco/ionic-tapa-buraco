@@ -33,9 +33,7 @@ export class LoginComponent {
     let email = this.login.value.email;
     let senha = this.login.value.senha;
     
-    this.auth
-    .auth
-    .signInWithEmailAndPassword(email, senha)
+    this.auth.auth .signInWithEmailAndPassword(email, senha)
     .then(value => {
       this.navCtrl.push(HomeComponent);
     })
