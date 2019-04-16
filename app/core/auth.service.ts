@@ -35,7 +35,7 @@ export class AuthService {
     this.aAuth.auth.signOut();
   }
 
-  signIn(email, senha){
+  singIn(email, senha){
     this.aAuth.auth.signInWithEmailAndPassword(email, senha)
     .then((ref) => {
       this.authState = ref.user
