@@ -37,18 +37,18 @@ export class LoginComponent {
     .auth
     .signInWithEmailAndPassword(email, senha)
     .then(value => {
-      console.log('Bom, funcionou!');
+      this.navCtrl.push(HomeComponent);
     })
     .catch(err => {
-      console.log('Algo deu errado:',err.message);
+      this.showAlert(err.message);
     });
     
   }
 
-  showAlert() {
+  showAlert(mensagem: string) {
     const alert = this.alertCtrl.create({
-      title: 'New Friend!',
-      subTitle: 'Your friend, Obi wan Kenobi, just accepted your friend request!',
+      title: 'Ops. Algo deu errado!',
+      subTitle: mensagem,
       buttons: ['OK']
     });
     alert.present();
