@@ -3,7 +3,7 @@ import { NavController } from 'ionic-angular';
 import { FormGroup, FormControl } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
 
-import { Denuncia } from '../../model/Denuncia';
+import { Denuncia } from '../../app/model/Denuncia';
 
 @Component({
   selector: 'app-denuncia',
@@ -18,7 +18,10 @@ export class DenunciaComponent {
     email: new FormControl(''),
     telefone: new FormControl(''),
     cpf: new FormControl(''),
-    imagens: new FormControl('')
+    imagens: new FormControl(''),
+    rua: new FormControl(''),
+    numero : new FormControl(''),
+    pontoRef: new FormControl('')
   });
 
   constructor(public db: AngularFirestore,
@@ -32,7 +35,11 @@ export class DenunciaComponent {
     this.denuncia.telefone = this.form.value.telefone;
     this.denuncia.cpf = this.form.value.cpf;
     //this.denuncia.imagens = this.form.value.imagens
+    this.denuncia.rua = this.form.value.endereco;
+    this.denuncia.numero = this.form.value.endereco;
+    this.denuncia.pontoReferencia = this.form.value.pontoRef;
     this.denuncia.data = new Date().toDateString;
+
 
     this.db.collection('denuncia').add(this.denuncia);
 

@@ -7,6 +7,10 @@ export interface Denuncia {
   email: string;
   telefone: string;
   imagens: Array<Imagem>;
+  cpf: string;
+  rua: string;
+  numero: number;
+  pontoReferencia: string;
   data: Date;
   
 }

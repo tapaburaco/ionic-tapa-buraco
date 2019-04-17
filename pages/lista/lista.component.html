@@ -1,0 +1,9 @@
+
+  <ion-list>
+    <h2> Lista de denuncias </h2>
+    <ion-item *ngFor="let d of lista | async">
+      <h2>{{d.rua}}, {{d.numero}}</h2>
+      <p>{{d.usuario}}</p>
+      <p>{{d.data}}</p>
+    </ion-item>
+  </ion-list>

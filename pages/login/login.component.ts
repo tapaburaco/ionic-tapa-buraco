@@ -3,7 +3,6 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { NavController } from 'ionic-angular';
 import { Observable } from 'rxjs';
 import { AngularFireAuth } from '@angular/fire/auth';
-import { AngularFirestore } from '@angular/fire/firestore';
 import { AlertController } from 'ionic-angular';
 
 import { HomeComponent } from '../home/home.component';

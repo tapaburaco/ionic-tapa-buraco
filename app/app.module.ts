@@ -18,6 +18,7 @@ import { CameraComponent } from './camera/camera.component';
 import { HomeComponent } from '../pages/home/home.component';
 import { DenunciaComponent } from '../pages/denuncia/denuncia.component';
 import { LoginComponent } from '../pages/login/login.component';
+import { ListaComponent } from '../pages/lista/lista.component';
 
 // Configurações do Firebase:
 const config = {
@@ -36,7 +37,8 @@ const config = {
     DenunciaComponent,
     MapsComponent,
     CameraComponent,
-    LoginComponent
+    LoginComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,8 @@ const config = {
     DenunciaComponent,
     MapsComponent,
     CameraComponent,
-    LoginComponent
+    LoginComponent,
+    ListaComponent
   ],
   providers: [
     GoogleMaps,
