@@ -10,6 +10,7 @@ import { HomeComponent } from '../home/home.component';
 import { Usuario } from '../../app/model/usuario';
 
 @Component({
+  selector: 'app-login',
   templateUrl: './login.component.html'
 })
 export class LoginComponent {
